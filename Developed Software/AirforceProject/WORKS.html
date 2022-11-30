@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Devin R. Olsen - Pure CSS Vertical Menu Demo</title>
+<style type="text/css">
+body{behavior:url(file:///C|/Users/pc/cssHoverFix.htc);}
+
+#navigation {
+    width: 150px;
+    font-size: 0.75em;
+}
+	#navigation ul {
+	    margin: 0px;
+	    padding: 0px;
+	}
+	ul.top-level { background: #666; }
+		
+		#navigation li { list-style: none; }
+        ul.top-level li {
+            border-bottom: #fff solid;
+            border-top: #fff solid;
+            border-width: 1px;
+        }
+			#navigation a {
+				color: #fff;
+				cursor: pointer;
+				display:block;
+				height:25px;
+				line-height: 25px;
+				text-indent: 10px;					
+				text-decoration:none;
+				width:100%;
+			}
+			#navigation a:hover{ text-decoration:underline;	}
+	        #navigation li:hover {
+	            background: #f90;
+	            position: relative;
+	        }
+        ul.sub-level { display: none; }
+        li:hover .sub-level {
+            background: #999;
+            border: #fff solid;
+            border-width: 1px;
+            display: block;
+            position: absolute;
+            left: 75px;
+            top: 5px;
+        }
+        ul.sub-level li {
+			border: none;
+			float:left;
+			width:150px; 
+        }
+		#navigation .sub-level { background: #999; }
+		#navigation .sub-level .sub-level { background: #09C; }
+						
+	/*IE RESET HELPER*/
+	li:hover .sub-level .sub-level { display:none; }
+	.sub-level li:hover .sub-level { display:block; }	
+</style>
+</head>
+    <body>
+		<div id="navigation">
+		    <ul class="top-level">
+		        <li><a href="#">Home</a>
+		            <ul class="sub-level">
+		                <li><a href="#">Sub Menu Item 1</a>
+		                </li>
+		                <li>
+		                    <a href="#">Sub Menu Item 2</a>
+		                    <ul class="sub-level">
+		                        <li><a href="#">Sub Sub Menu Item 1</a></li>
+		                        <li><a href="#">Sub Sub Menu Item 2</a></li>
+		                        <li><a href="#">Sub Sub Menu Item 3</a></li>
+		                        <li><a href="#">Sub Sub Menu Item 4</a></li>
+		                    </ul>
+		                </li>
+		                <li><a href="#">Sub Menu Item 3</a></li>
+		                <li><a href="#">Sub Menu Item 3</a></li>
+		            </ul>
+		        </li>
+		        <li><a href="#">About</a></li>
+		        <li><a href="#">Contact</a></li>
+		        <li>
+		            <a href="#">FAQ</a>
+		            <ul class="sub-level">
+		                <li><a href="#">Sub Menu Item 1</a></li>
+		                <li>
+		                    <a href="#">Sub Menu Item 3</a>
+		                    <ul class="sub-level">
+		                        <li><a href="#">Sub Sub Menu Item 1</a></li>
+		                        <li><a href="#">Sub Sub Menu Item 2</a></li>
+		                        <li><a href="#">Sub Sub Menu Item 3</a></li>
+		                        <li><a href="#">Sub Sub Menu Item 4</a></li>
+		                    </ul>
+		                </li>
+		            </ul>
+		        </li>
+		        <li>
+		            <a href="#">News</a>
+		            <ul class="sub-level">
+		                <li><a href="#">Sub Menu Item 1</a>
+		                    <ul class="sub-level">
+		                        <li><a href="#">Sub Sub Menu Item 1</a></li>
+		                        <li><a href="#">Sub Sub Menu Item 2</a></li>
+		                        <li><a href="#">Sub Sub Menu Item 3</a></li>
+		                        <li><a href="#">Sub Sub Menu Item 4</a></li>
+		                    </ul>
+		                </li>
+		                <li><a href="#">Sub Menu Item 2</a></li>
+		                <li><a href="#">Sub Menu Item 3</a></li>
+		            </ul>
+		        </li>
+		    </ul>
+		</div>
+    </body>
+</html>

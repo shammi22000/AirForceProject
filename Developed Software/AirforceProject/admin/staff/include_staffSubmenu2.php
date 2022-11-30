@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<style type="text/css">
+body{behavior:url(cssHoverFix.htc);}
+
+#navigation {
+    width: 200px;
+    font-size: 1em;
+}
+	#navigation ul {
+	    margin: 0px;
+	    padding: 0px;
+	}
+	ul.top-level { background: #A8CBF7; }
+		
+		#navigation li { list-style: none; }
+        ul.top-level li {
+            border-bottom: #fff solid;
+            border-top: #fff solid;
+            border-width: 0px;
+        }
+			#navigation a {
+				color: ;
+				cursor: pointer;
+				display:block;
+				height:35px;
+				line-height: 25px;
+				text-indent: 5px;					
+				text-decoration:none;
+				width:100%;
+			}
+			#navigation a:hover{ text-decoration: none;	}
+	        #navigation li:hover {
+	            background: #91C8FF;
+	            position: relative;
+	        }
+        ul.sub-level { display: none; }
+        li:hover .sub-level {
+            background: #999;
+			border: #fff solid;
+            border-width: 1px;
+            display: block;
+            position: absolute;
+            left:150px;
+            top: 5px;
+        }
+        ul.sub-level li {
+			border: none;
+			float:left;
+			width:150px; 
+        }
+		#navigation .sub-level { background: #999; }
+		#navigation .sub-level .sub-level { background: #09C; }
+						
+	/*IE RESET HELPER*/
+	li:hover .sub-level .sub-level { display:none; }
+	.sub-level li:hover .sub-level { display:block; }	
+</style>
+
+    <body>
+		<div id="navigation">
+		    <ul class="top-level">
+             <li>&nbsp;</li>
+		        <li><a href="index.php">Staff Home</a></li>
+                <li><a href="paymentView.php">Payment Management</a>
+                   <ul class="sub-level">
+		                 <li><a href="paymentView.php">View Details</a></li>
+		                 <li><a href="paymentInsert.php">Insert Detail</a></li>
+		           </ul>
+                
+                </li>
+                <li><a href="supplierDoc.php">Upload Documents</a>
+               <ul class="sub-level">
+		                <li><a href="supplierDocView.php">View Documents</a></li>
+      					<li><a href="supplierDoc.php">Insert Documents</a></li>
+		          </ul></li>
+                <li>
+		            <a href="stationView.php">Station Management</a>
+		            <ul class="sub-level">
+		                <li><a href="stationView.php">View Details</a></li>
+      					<li><a href="stationInsert.php">Insert Detail</a></li>
+     				    <li><a href="stationSearch.php">Search Detail</a></li>
+		            </ul>
+		        </li>
+                <li><a href="categoryView.php">Category management</a>
+                 	<ul class="sub-level">
+		                 <li><a href="categoryView.php">View Details</a></li>
+		                 <li><a href="categoryInsert.php">Insert Detail</a></li>
+		                 
+		           	</ul>
+                </li>
+		        <li><a href="itemView.php" >Item Management</a>
+                   <ul class="sub-level">
+		                 <li><a href="itemView.php">View Details</a></li>
+		                 <li><a href="itemInsert.php">Insert Detail</a></li>
+		                 <li><a href="itemSearch.php">Search Detail</a></li>
+		           </ul>
+                
+                </li>
+		                   
+		        <li>
+		           <a href="conDetaView.php">Contact Detail Management</a>
+		          <ul class="sub-level">
+		                <li><a href="conDetaView.php">View Information</a></li>
+      					<li><a href="conDetaInsert.php">Insert Information</a></li>
+		          </ul>
+		       <li>
+               
+               <li><a href="../logout.php">Logout</a></li>
+		    </ul>
+		</div>
+    </body>
+</html>

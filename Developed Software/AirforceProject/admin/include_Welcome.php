@@ -1,0 +1,1 @@
+Welcome  <?php echo $_SESSION['user'];  ?> to Admin Area!! 
